@@ -1,13 +1,14 @@
 version: '3.6'
 services:
-
-  nginx:
-    image: nginx:latest
+  my-nginx:
+    build:
+      context: ./my-nginx/
+      args:
+        ENABLED_MODULES: cachepurge
     ports:
       - "127.0.0.1:8080:80"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./html5up-stellar/:/data/www # Static content
+      - ./my-nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - image-store
     networks:
@@ -18,7 +19,8 @@ services:
     ports:
       - "127.0.0.1:8081:81"
     volumes:
-      - ./nginx/image-store/default.conf:/etc/nginx/conf.d/default.conf
+      - ./image-store/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./html5up-stellar/:/data/www # Static content
       - ./images/:/data/images
     networks:
       - backend
