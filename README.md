@@ -1,9 +1,9 @@
 # HSA Nginx cache
 Exploring capabilities of Nginx cache
 
-<h3>Task</h3>
+Task
 - Setup Nginx cache for images
-- Allow purge cache for specific image passing cacheKey
+- Allow cache purging for specific image passing cacheKey
 
 <h3>Build</h3>
 Add third-party modules to official Nginx image: <br/>
