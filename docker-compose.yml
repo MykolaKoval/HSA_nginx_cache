@@ -7,7 +7,18 @@ services:
       - "127.0.0.1:8080:80"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./html5up-stellar/:/data/www/stellar
+      - ./html5up-stellar/:/data/www # Static content
+    depends_on:
+      - image-store
+    networks:
+      - backend
+
+  image-store:
+    image: nginx:latest
+    ports:
+      - "127.0.0.1:8081:81"
+    volumes:
+      - ./nginx/image-store/default.conf:/etc/nginx/conf.d/default.conf
       - ./images/:/data/images
     networks:
       - backend
