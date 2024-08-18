@@ -2,12 +2,12 @@
 Exploring capabilities of Nginx cache
 
 <h3>Task</h3>
-* Setup Nginx cache for images
-* Allow purge cache for specific image passing cacheKey
+- Setup Nginx cache for images
+- Allow purge cache for specific image passing cacheKey
 
 <h3>Build</h3>
 Add third-party modules to official Nginx image: <br/>
-https://github.com/nginxinc/docker-nginx/blob/master/modules/README.md
+https://github.com/nginxinc/docker-nginx/blob/master/modules/README.md <br/>
 
 **My-nginx:** custom Nginx image built with [ngx_cache_purge](https://github.com/nginx-modules/ngx_cache_purge) module
 
