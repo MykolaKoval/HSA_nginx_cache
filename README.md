@@ -9,7 +9,7 @@ Exploring capabilities of Nginx cache
 Add third-party modules to official Nginx image: <br/>
 https://github.com/nginxinc/docker-nginx/blob/master/modules/README.md
 
-**My-nginx:** custom Nginx image with [ngx_cache_purge](https://github.com/nginx-modules/ngx_cache_purge) module
+**My-nginx:** custom Nginx image built with [ngx_cache_purge](https://github.com/nginx-modules/ngx_cache_purge) module
 
 <h3>Description</h3>
 Display [stellar](https://html5up.net/stellar) static content under http://localhost:8081
